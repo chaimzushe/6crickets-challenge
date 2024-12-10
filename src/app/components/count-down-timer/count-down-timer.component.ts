@@ -20,7 +20,7 @@ export class CountDownTimerComponent implements OnInit, OnDestroy{
     public readableTime: string = '00:00:00';
 
     get timerData(){
-      return this.secondsLeft > 0 ? `Seconds left to deadline ${this.secondsLeft}` : 'The deadline has passed!'
+      return this.secondsLeft > 0 ? `Seconds left to deadline ${this.readableTime}` : 'The deadline has passed!'
     }
 
     constructor(private projectService:ProjectService) {}
